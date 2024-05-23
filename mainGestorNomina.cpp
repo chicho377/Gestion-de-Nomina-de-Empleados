@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
                 cantProfesionales++;
                 break;
             default:
-                printf("Tipo de empleado no válido.\n");
+                printf("Tipo de empleado no valido.\n");
                 continue;
         }
         
@@ -72,46 +72,57 @@ int main(int argc, char** argv) {
             acumuladoNetoProfesionales += salarioNeto;
         }
         
+        // Mostrar los datos del empleado
         printf("\nDatos del empleado:\n");
+        printf("--------------------------------------------------\n");
         printf("Cedula: %s\n", cedula);
         printf("Nombre: %s\n", nombre);
         printf("Tipo Empleado: %d\n", tipo);
         printf("Salario por Hora: %.2lf\n", salarioPorHora);
         printf("Cantidad de Horas: %.2lf\n", horasTrabajadas);
+        printf("--------------------------------------------------\n");
         printf("Salario Ordinario: %.2lf\n", salarioOrdinario);
         printf("Aumento: %.2lf\n", aumento);
         printf("Salario Bruto: %.2lf\n", salarioBruto);
-        printf("Deducción CCSS: %.2lf\n", deduccionCCSS);
+        printf("Deduccion CCSS: %.2lf\n", deduccionCCSS);
         printf("Salario Neto: %.2lf\n", salarioNeto);
+        printf("--------------------------------------------------\n");
         
         printf("\n¿Desea ingresar otro empleado? (1-Si, 0-No): ");
         scanf("%d", &opcion);
 	}while(opcion != 0);
     
-    printf("\nEstadísticas finales:\n");
+    printf("\nEstadisticas finales:\n");
+    printf("--------------------------------------------------\n");
     printf("Cantidad de Empleados Tipo Operarios: %d\n", cantOperarios);
-    printf("Acumulado Salario Neto para Operarios: %.2lf\n", acumuladoNetoOperarios);
     if (cantOperarios > 0) {
+    	printf("Acumulado Salario Neto para Operarios: %.2lf\n", acumuladoNetoOperarios);
         printf("Promedio Salario Neto para Operarios: %.2lf\n", acumuladoNetoOperarios / cantOperarios);
     } else {
+    	printf("Acumulado Salario Neto para Operarios: N/A\n");
         printf("Promedio Salario Neto para Operarios: N/A\n");
     }
     
-    printf("Cantidad de Empleados Tipo Técnico: %d\n", cantTecnicos);
-    printf("Acumulado Salario Neto para Técnicos: %.2lf\n", acumuladoNetoTecnicos);
+    printf("--------------------------------------------------\n");
+    printf("Cantidad de Empleados Tipo Tecnico: %d\n", cantTecnicos);
     if (cantTecnicos > 0) {
-        printf("Promedio Salario Neto para Técnicos: %.2lf\n", acumuladoNetoTecnicos / cantTecnicos);
+    	printf("Acumulado Salario Neto para Tecnicos: %.2lf\n", acumuladoNetoTecnicos);
+        printf("Promedio Salario Neto para Tecnicos: %.2lf\n", acumuladoNetoTecnicos / cantTecnicos);
     } else {
-        printf("Promedio Salario Neto para Técnicos: N/A\n");
+    	printf("Acumulado Salario Neto para Tecnicos: N/A\n");
+        printf("Promedio Salario Neto para Tecnicos: N/A\n");
     }
     
+    printf("--------------------------------------------------\n");
     printf("Cantidad de Empleados Tipo Profesional: %d\n", cantProfesionales);
-    printf("Acumulado Salario Neto para Profesionales: %.2lf\n", acumuladoNetoProfesionales);
     if (cantProfesionales > 0) {
+    	printf("Acumulado Salario Neto para Profesionales: %.2lf\n", acumuladoNetoProfesionales);
         printf("Promedio Salario Neto para Profesionales: %.2lf\n", acumuladoNetoProfesionales / cantProfesionales);
     } else {
+    	printf("Acumulado Salario Neto para Profesionales: N/A\n");
         printf("Promedio Salario Neto para Profesionales: N/A\n");
     }
+    printf("--------------------------------------------------\n");
 
     getch(); // Pausa antes de finalizar el programa
     
