@@ -96,5 +96,13 @@ int main(int argc, char** argv) {
         printf("Promedio Salario Neto para Operarios: N/A\n");
     }
     
+    printf("Cantidad de Empleados Tipo Técnico: %d\n", cantTecnicos);
+    printf("Acumulado Salario Neto para Técnicos: %.2lf\n", acumuladoNetoTecnicos);
+    if (cantTecnicos > 0) {
+        printf("Promedio Salario Neto para Técnicos: %.2lf\n", acumuladoNetoTecnicos / cantTecnicos);
+    } else {
+        printf("Promedio Salario Neto para Técnicos: N/A\n");
+    }
+    
 	return 0;
 }
