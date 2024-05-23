@@ -71,6 +71,18 @@ int main(int argc, char** argv) {
             acumuladoNetoProfesionales += salarioNeto;
         }
         
+        printf("\nDatos del empleado:\n");
+        printf("Cedula: %s\n", cedula);
+        printf("Nombre: %s\n", nombre);
+        printf("Tipo Empleado: %d\n", tipo);
+        printf("Salario por Hora: %.2lf\n", salarioPorHora);
+        printf("Cantidad de Horas: %.2lf\n", horasTrabajadas);
+        printf("Salario Ordinario: %.2lf\n", salarioOrdinario);
+        printf("Aumento: %.2lf\n", aumento);
+        printf("Salario Bruto: %.2lf\n", salarioBruto);
+        printf("Deducción CCSS: %.2lf\n", deduccionCCSS);
+        printf("Salario Neto: %.2lf\n", salarioNeto);
+        
         printf("\n¿Desea ingresar otro empleado? (1-Si, 0-No): ");
         scanf("%d", &opcion);
 	}while(opcion != 0);
