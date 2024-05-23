@@ -62,6 +62,15 @@ int main(int argc, char** argv) {
         deduccionCCSS = salarioBruto * 0.0917;
         salarioNeto = salarioBruto - deduccionCCSS;
         
+        // Actualiza los acumulados después de calcular el salario neto
+        if (tipo == 1) {
+            acumuladoNetoOperarios += salarioNeto;
+        } else if (tipo == 2) {
+            acumuladoNetoTecnicos += salarioNeto;
+        } else if (tipo == 3) {
+            acumuladoNetoProfesionales += salarioNeto;
+        }
+        
         printf("\n¿Desea ingresar otro empleado? (1-Si, 0-No): ");
         scanf("%d", &opcion);
 	}while(opcion != 0);
