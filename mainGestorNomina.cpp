@@ -27,7 +27,8 @@ int main(int argc, char** argv) {
         scanf("%s", cedula);
 
         printf("Ingrese el nombre del empleado: ");
-        scanf("%s", nombre);
+        getchar();  // Consumir el salto de línea pendiente en el buffer
+        fgets(nombre, sizeof(nombre), stdin);
 
         printf("Ingrese el tipo de empleado (1-Operario, 2-Tecnico, 3-Profesional): ");
         scanf("%d", &tipo);
