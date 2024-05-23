@@ -87,6 +87,14 @@ int main(int argc, char** argv) {
         scanf("%d", &opcion);
 	}while(opcion != 0);
     
+    printf("\nEstadísticas finales:\n");
+    printf("Cantidad de Empleados Tipo Operarios: %d\n", cantOperarios);
+    printf("Acumulado Salario Neto para Operarios: %.2lf\n", acumuladoNetoOperarios);
+    if (cantOperarios > 0) {
+        printf("Promedio Salario Neto para Operarios: %.2lf\n", acumuladoNetoOperarios / cantOperarios);
+    } else {
+        printf("Promedio Salario Neto para Operarios: N/A\n");
+    }
     
 	return 0;
 }
