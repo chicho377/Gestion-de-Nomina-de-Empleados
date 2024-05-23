@@ -38,6 +38,30 @@ int main(int argc, char** argv) {
         printf("Ingrese la cantidad de horas trabajadas: ");
         scanf("%lf", &horasTrabajadas);
         
+        salarioOrdinario = salarioPorHora * horasTrabajadas;
+
+        switch(tipo) {
+            case 1: // Operario
+                aumento = salarioOrdinario * 0.15;
+                cantOperarios++;
+                break;
+            case 2: // Técnico
+                aumento = salarioOrdinario * 0.10;
+                cantTecnicos++;
+                break;
+            case 3: // Profesional
+                aumento = salarioOrdinario * 0.05;
+                cantProfesionales++;
+                break;
+            default:
+                printf("Tipo de empleado no válido.\n");
+                continue;
+        }
+        
+        salarioBruto = salarioOrdinario + aumento;
+        deduccionCCSS = salarioBruto * 0.0917;
+        salarioNeto = salarioBruto - deduccionCCSS;
+        
         printf("\n¿Desea ingresar otro empleado? (1-Si, 0-No): ");
         scanf("%d", &opcion);
 	}while(opcion != 0);
